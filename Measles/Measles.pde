@@ -14,10 +14,6 @@ void setup() {
   population();
   //Theme: i.e. Face (will work in portrait and landscape)
   faceSetup();
-  eyes();
-  mouth();
-  nose();
-  measlesDynamic();
   //Background Image (could be in draw too)
 }//End setup
 //
@@ -33,8 +29,14 @@ void draw() {
 //
 void keyPressed() {
   //KeyBoard Shortcuts
-  if ( key=='N' | key=='n' ) if ( nightMode==false ) {nightMode=true;} else {nightMode=false;}
-  println(nightMode);
+  if ( key=='N' | key=='n' ) { 
+    if ( nightMode==false ) {
+      nightMode=true;
+    } else {
+      nightMode=false;
+    }
+  }
+  println("Night Mode", nightMode);
 }//End keyPressed
 //
 void mousePressed() {
